@@ -1,0 +1,133 @@
+.home {
+  .top{
+    text-align: center;
+    color: #fff;
+    padding: 40px 0;
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    li {
+      list-style-position: inside;
+      list-style-type: disc;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    ul {
+      margin-bottom: 80px;
+    }
+
+    button {
+      clear: both;
+      font-size: 2em;
+
+      i {
+        margin-top: 10px;
+      }
+    }
+
+    background-color: #74B63E;
+  }
+
+
+  article {
+    text-align: left;
+    @include make-md-column(4);
+  }
+
+  section {
+    clear: left;
+    @include clearfix;
+  }
+
+  h1 {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .crowdfunding {
+    text-align: left;
+
+    h1 {
+      text-align: center;
+    }
+    .description {
+      @include make-md-column(8);
+
+      .qrcode {
+        float: left;
+      }
+
+      h2{
+        clear: left;
+      }
+    }
+
+    .levels{
+      @include make-md-column(4);
+      h3 {
+        font-size: 1.2em;
+      }
+
+      h4 {
+        font-size: .8em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+  .preorder {
+    @include make-md-column(12);
+
+    .price {
+      text-align: right;
+      font-size: 2.3em;
+      @include make-md-column(3);
+     }
+
+     .usd {
+       @include make-md-column(2);
+       padding-left: 0;
+       margin-top: 17px;
+     }
+
+     .total {
+       text-align: right;
+       font-weight: bold;
+       border-top: 3px solid #ddd;
+       font-size: 2.3em;
+       @include make-md-column(3);
+       @include make-md-column-offset(7);
+       padding-right: 0;
+      .tooltip {
+        @extend .hidden-md;
+        position: relative;
+        top: 11px;
+        right: 5px;
+      }
+     }
+
+     button.checkout {
+      clear: left;
+      font-weight: bold;
+      @include make-md-column(3);
+      @include make-md-column-offset(7);
+     }
+  }
+  .form-group {
+    label {
+      @include make-md-column(2);
+      @include make-md-column-offset(1);
+    }
+    .control-wrapper {
+      @include make-md-column(4);
+    }
+  }
+}

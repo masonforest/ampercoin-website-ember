@@ -2,7 +2,10 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp()
+
+app.import('vendor/sky-labels/sky-labels.js')
+app.import('bower_components/qrcodejs/qrcode.js')
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

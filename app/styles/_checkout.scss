@@ -1,0 +1,20 @@
+.checkout {
+  .qr-code {
+    clear: left;
+    padding: 10px;
+    @include make-md-column-offset(2);
+    @include make-md-column(2);
+  }
+
+  .order-details {
+    @include make-md-column-offset(2);
+    @include make-md-column(6);
+    &>div {
+      font-size: 20px;
+    }
+  }
+
+  .payment {
+    @include make-md-column(6);
+  }
+}

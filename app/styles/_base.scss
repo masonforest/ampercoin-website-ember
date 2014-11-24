@@ -1,0 +1,24 @@
+button, input[type=submit] {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+form {
+  @extend .form-horizontal
+}
+
+.form-group {
+  @extend .form-group-lg;
+
+  label {
+    @extend .control-label
+  }
+  input {
+    @extend .form-control;
+  }
+}
+
+i {
+  margin-right: 10px;
+}

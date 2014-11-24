@@ -6,6 +6,15 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
+      'font-src': "'self' data: fonts.googleapis.com fonts.gstatic.com",
+      'connect-src': "'self' www.corsproxy.com",
+      'img-src': "'self' data: www.facebook.com fonts.googleapis.com",
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com",
+      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

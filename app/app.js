@@ -11,6 +11,17 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+// $.ajax(
+//   {
+//     url: 'http://jsbox-runner.herokuapp.com/masonforest/btc_to_usd',
+//    data: {btc: 1},
+//    method: 'POST',
+//    success: function(d){
+//       alert(d);
+//    }
+//   }
+// );
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;

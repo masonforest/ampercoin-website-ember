@@ -1,0 +1,17 @@
+<div class="checkout">
+  <div class="container">
+    <div class="order-details">
+      <h2>Order Details:</h2>
+      <div>Address: &amp;{{model.address}}</div>
+      <div>Amount: &amp;{{model.amount}} ({{model.amount}} Ampercoins)</div>
+    </div>
+    <div class="qr-code">
+      {{qr-code value=bitcoinAddress}}
+    </div>
+    <div class="payment">
+      <h3>Please pay exactly {{model.amountInBTC}} BTC to:</h3>
+      <h3>{{model.bitcoinAddress}}</h3>
+
+    </div>
+  </div>
+</div>
