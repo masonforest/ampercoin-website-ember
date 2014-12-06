@@ -39,7 +39,6 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "ember-cli-font-awesome": "0.0.4",
-    "ember-cli-s3": "git://github.com/devmynd/ember-cli-s3",
     "rsvp": "^3.0.14"
   }
 }

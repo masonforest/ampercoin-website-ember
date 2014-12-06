@@ -6,16 +6,16 @@ export default Ember.Controller.extend({
   },
   subtotal: function(){
     if(this.get('amount')) {
-      return (this.get('amount') * 2000);
+      return BigNumber(this.get('amount')).times(0.002).toFixed(3);
     } else {
       return 0;
     }
   }.property('amount'),
   total: function() {
     if(this.get('subtotal')) {
-      return this.get('subtotal') + 20000;
+      return BigNumber(this.get('subtotal')).plus(0.02).toFixed(3);
     } else {
-      return 20000;
+      return (0.020).toFixed(3);
     }
     }.property('subtotal'),
   actions: {

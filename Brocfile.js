@@ -6,6 +6,7 @@ var app = new EmberApp()
 
 app.import('vendor/sky-labels/sky-labels.js')
 app.import('bower_components/qrcodejs/qrcode.js')
+app.import('bower_components/bignumber.js/bignumber.js')
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
