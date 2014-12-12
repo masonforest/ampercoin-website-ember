@@ -16,51 +16,22 @@
     </div>
   </div>
   <div class="preorder">
-    <h1>Preorder Ampercoin and your Ampercoin address today</h1>
+    <h1>Preorder your Ampercoin address today</h1>
     <div class='checkout'>
 <form accept-charset="UTF-8" action="/addresses" class="inline" id="new_address" method="post">
-  <div class='form-group amount'>
-    <label for="amount">Amount</label>
-    <div class="control-wrapper">
-      <div class="input-group">
-        <div class="input-group-addon">&</div>
-        {{input type="text" class="form-control" id="amount" value=amount placeholder="5"}}
-        <div class="input-group-addon">* 0.002 BTC</div>
-      </div>
-    </div>
-    <div class="amount price">
-      {{subtotal}} BTC
-    </div>
-  </div>
   <div class='form-group address'>
-    <label for="address_name">Address</label>
     <div class="control-wrapper">
       <div class="input-group">
         <div class="input-group-addon">&</div>
         {{input type="text" class="form-control" id="address" name="address" value=address placeholder="emily"}}
-        <div class="input-group-addon">0.02 BTC</div>
       </div>
     </div>
-    <div class="price">
-        + 0.020 BTC
-    </div>
+    <button type="submit" class="checkout" type="submit" {{action 'createOrder'}} />
+      <i class="fa fa-btc"></i>
+    Checkout
+    </button>
   </div>
 
-  <div class="total">
-    {{total}} BTC
-  </div>
-  <div class="usd">
-    <div class="tooltip right in" role="tooltip">
-      <div class="tooltip-arrow"></div>
-      <div class="tooltip-inner">
-        ({{btc-to-usd total}})
-      </div>
-    </div>
-  </div>
-  <button type="submit" class="checkout" type="submit" {{action 'createOrder'}} />
-    <i class="fa fa-btc"></i>
-  Checkout
-  </button>
   </form>
     </div>
   <div class="about container">

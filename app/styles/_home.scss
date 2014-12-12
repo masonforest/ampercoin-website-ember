@@ -115,19 +115,16 @@
      }
 
      button.checkout {
-      clear: left;
       font-weight: bold;
-      @include make-md-column(3);
-      @include make-md-column-offset(7);
      }
   }
   .form-group {
     label {
-      @include make-md-column(2);
-      @include make-md-column-offset(1);
     }
     .control-wrapper {
-      @include make-md-column(4);
+      font-size: 4em;
+      @include make-md-column(3);
+      @include make-md-column-offset(4);
     }
   }
 }
