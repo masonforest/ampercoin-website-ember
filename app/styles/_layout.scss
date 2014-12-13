@@ -3,23 +3,37 @@
 }
 
 header {
-  color: #fff;
-  background-color: #74B63E;
+  color: #000;
   padding: 20px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
   h1 {
     text-align: center;
-    font-family: Roboto;
-    font-size: 5em;
-    font-weight: 900;
+  }
+}
 
-    .amp {
-      font-weight: 700;
-    }
+.logo {
+  font-family: 'Open Sans', 'Helvetica Neu', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0 auto;
+  width: 221px;
+  vertical-align: middle;
+
+  .ampersand {
+    font-size: 24px;
+    color: #74B63E;
+    border: 5px solid;
+    position: relative;
+    float: left;
+    border-radius: 69px;
+    width: 46px;
+    text-align: center;
+    margin-right: 7px;
   }
 }
 
 footer {
+  border-top: 1px solid #ddd;
   text-align: center;
   padding: 40px 0;
 }

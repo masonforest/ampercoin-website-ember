@@ -8,3 +8,5 @@ export default DS.RESTAdapter.extend({
     return this._super(url, method, hash);
   }
 });
+
+export default DS.RESTAdapter

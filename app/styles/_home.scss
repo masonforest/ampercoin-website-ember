@@ -18,10 +18,6 @@
       font-size: 1.5em;
     }
 
-    ul {
-      margin-bottom: 80px;
-    }
-
     button {
       clear: both;
       font-size: 2em;
@@ -32,6 +28,7 @@
     }
 
     background-color: #74B63E;
+    border-bottom: 1px solid #ddd;
   }
 
 
@@ -84,8 +81,6 @@
     }
   }
   .preorder {
-    @include make-md-column(12);
-
     .price {
       text-align: right;
       font-size: 2.3em;
@@ -112,10 +107,6 @@
         top: 11px;
         right: 5px;
       }
-     }
-
-     button.checkout {
-      font-weight: bold;
      }
   }
   .form-group {

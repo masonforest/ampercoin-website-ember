@@ -5,8 +5,8 @@ export default Ember.Component.extend({
     var element = this.get('element');
     new QRCode(element, {
       text: "http://jindo.dev.naver.com/collie",
-      width: 128,
-      height: 128,
+      width: 168,
+      height: 168,
       colorDark : "#000000",
       colorLight : "#ffffff",
       correctLevel : QRCode.CorrectLevel.H

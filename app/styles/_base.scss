@@ -1,3 +1,4 @@
+
 button, input[type=submit] {
   @extend .btn;
   @extend .btn-primary;
@@ -6,6 +7,10 @@ button, input[type=submit] {
 
 form {
   @extend .form-horizontal
+}
+
+.input-group-addon {
+  font-size: $font-size-large;
 }
 
 .form-group {
