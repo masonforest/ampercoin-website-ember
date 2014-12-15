@@ -2,11 +2,20 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp()
+var app = new EmberApp({
+  vendorFiles:{
+    'handlebars.js':{
+      production: 'bower_components/handlebars/handlebars.min.js'
+    }
+  }
+});
+
 
 app.import('vendor/sky-labels/sky-labels.js')
 app.import('bower_components/qrcodejs/qrcode.js')
 app.import('bower_components/bignumber.js/bignumber.js')
+app.import('bower_components/pusher/dist/pusher.js')
+app.import('vendor/ember-pusher/ember-pusher.js')
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

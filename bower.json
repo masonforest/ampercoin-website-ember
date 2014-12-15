@@ -15,6 +15,7 @@
     "qunit": "~1.15.0",
     "bootstrap-sass-official": "~3.3.0",
     "qrcodejs": "~0.1.0",
-    "qrcode.js": "https://raw.githubusercontent.com/teambition/qrcodejs/master/bower.json"
+    "qrcode.js": "https://raw.githubusercontent.com/teambition/qrcodejs/master/bower.json",
+    "pusher": "~2.2.3"
   }
 }

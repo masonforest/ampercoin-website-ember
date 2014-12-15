@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
-  ready: function () {
-    $('[data-toggle="tooltip"]').tooltip()
+export default Ember.Controller.extend(EmberPusher.Bindings, {
+  //layoutName: 'layout',
+  logPusherEvents: true,
+  PUSHER_SUBSCRIPTIONS: {
+    myChannel: ['my-event']
   },
   subtotal: function(){
     if(this.get('amount')) {
@@ -31,8 +33,7 @@ export default Ember.Controller.extend({
       var self = this;
 
       var onSuccess = function(order) {
-        console.log(order)
-        self.transitionToRoute('orders', order);
+        self.transitionToRoute("order", order);
       };
 
       var onFail = function(order) {

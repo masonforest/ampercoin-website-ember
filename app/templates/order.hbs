@@ -1,13 +1,14 @@
 <div class="checkout">
   <div class="container">
+    <button {{action 'paid'}}>I paid</button>
     <div class="qr-code">
       {{qr-code value=bitcoinAddress}}
     </div>
     <div class="payment">
       <h1>Preordering: &amp;{{model.address}} and 10 Ampercoins</h1>
-      <h3>Waiting for payment <i class="fa fa-spinner fa-spin"></i></h3>
+      <h3><i class="fa fa-spinner fa-spin"></i> Waiting for payment</i></h3>
       <h3>Please pay exactly {{model.amountInBTC}} BTC to:</h3>
-      <h3>{{model.bitcoinAddress}}</h3>
+      <h3>{{model.payment_address}}</h3>
 
     </div>
   </div>

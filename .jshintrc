@@ -3,7 +3,9 @@
     "document",
     "window",
     "$",
-    "-Promise"
+    "-Promise",
+    "Pusher",
+    "EmberPusher"
   ],
   "browser" : true,
   "boss" : true,
