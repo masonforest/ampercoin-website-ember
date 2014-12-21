@@ -1,2 +1,28 @@
-<h1>{{address}}</h1>
-Balance: &amp;10.00
+<div class="container">
+  <div class="account-info">
+    <div class="address">Address: &{{model.address}}</div>
+    <br>
+    <div class="balance">Balance: &amp;10.00</div>
+    {{#if model.locked}}
+    <button {{action "comingSoon"}}>
+        <i class="fa fa-key"></i>
+        Unlock Wallet</button>
+    {{else}}
+      <input placeholder="&bob"/>
+      <input placeholder="1.00"/>
+      <button {{action "comingSoon"}}>
+        <i class="fa fa-share"></i>
+        Send Money
+      </button>
+      <br>
+      <button {{action "comingSoon"}}>
+        <i class="fa fa-download"></i>
+        Download Wallet Key
+      </button>
+      <button {{action "comingSoon"}}>
+        <i class="fa fa-key"></i>
+        Lock Wallet
+      </button>
+    {{/if}}
+  </div>
+</div>

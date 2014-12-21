@@ -11,11 +11,14 @@ var app = new EmberApp({
 });
 
 
-app.import('vendor/sky-labels/sky-labels.js')
+app.import('bower_components/steganography/src/steganography.js')
+app.import('bower_components/blockies/blockies.js')
 app.import('bower_components/qrcodejs/qrcode.js')
 app.import('bower_components/bignumber.js/bignumber.js')
 app.import('bower_components/pusher/dist/pusher.js')
+app.import('bower_components/secure-random/lib/secure-random.js')
 app.import('vendor/ember-pusher/ember-pusher.js')
+app.import('vendor/eckey/ECKey.js')
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

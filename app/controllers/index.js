@@ -23,25 +23,34 @@ export default Ember.Controller.extend(EmberPusher.Bindings, {
   actions: {
     createOrder: function() {
       var store = this.get('store')
-      var order = store.createRecord('order',
-        {
-          address: this.get('address'),
-          amount: this.get('amount')
-        }
-      );
+      var randomBytes = secureRandom(32);
+      var key = new ECKey(randomBytes, true);
 
+      localStorage[key.publicKey.toString('hex')] = key.privateKey.toString('hex')
+      var account = store.createRecord('account', {
+        address: this.get('address'),
+        public_key: key.publicKey.toString('hex'),
+      })
       var self = this;
 
-      var onSuccess = function(order) {
-        self.transitionToRoute("order", order);
-      };
+      account.save().then(function(account) {
+        var order = store.createRecord('order');
+        order.set('account', account)
 
-      var onFail = function(order) {
-        console.log(order)
-        // deal with the failure here
-      };
+        var onSuccess = function(order) {
+          self.transitionToRoute("order", order);
+        };
 
-      order.save().then(onSuccess, onFail);
+        var onFail = function(order) {
+          console.log(order)
+          // deal with the failure here
+        };
+
+        order.save().then(onSuccess, onFail);
+      });
+
+      // var self = this;
+      //
     },
     learnMore: function() {
       $('html, body').animate({

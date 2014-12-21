@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('learnMore');
   this.resource('order', { path: '/orders/:order_id' });
-  this.resource('account', { path: ':address' });
+  this.resource('account', { path: ':account_id' });
 });
 
 export default Router;

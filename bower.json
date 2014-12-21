@@ -16,6 +16,11 @@
     "bootstrap-sass-official": "~3.3.0",
     "qrcodejs": "~0.1.0",
     "qrcode.js": "https://raw.githubusercontent.com/teambition/qrcodejs/master/bower.json",
-    "pusher": "~2.2.3"
+    "pusher": "~2.2.3",
+    "secure-random": "~1.1.1",
+    "cryptocoin-eckey": "~0.8.0",
+    "crypto": "~3.46.1",
+    "blockies": "~0.1.1",
+    "steganography": "~1.0.1"
   }
 }
