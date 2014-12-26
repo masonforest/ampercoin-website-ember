@@ -1,5 +1,7 @@
 <div class="checkout">
   <div class="container">
+    <h4 class="text-center">*Ampercoin is still under development. The network is expected to go
+        live in Q4 of 2015</h4>
     <div class="qr-code">
       {{qr-code value=bitcoinAddress}}
     </div>
@@ -9,7 +11,6 @@
       <h3>Please pay exactly {{model.amountInBTC}} BTC to:</h3>
       <h3>{{model.payment_address}}</h3>
 
-      <h1>{{model.account.public_key}}</h1>
     </div>
   </div>
 </div>

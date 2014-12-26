@@ -51,15 +51,13 @@ export default Ember.Controller.extend(EmberPusher.Bindings, {
 
       // var self = this;
       //
+    }
     },
-    learnMore: function() {
-      $('html, body').animate({
-          scrollTop: 600
-      }, 1000);
-    },
-    checkout: function(){
-      alert('hi')
-      console.log(this.store.all('order'));
-    },
+    init: function(){
+      this._super();
+      self = this;
+      $.getJSON('http://localhost:3000/accounts').then(function(data){
+        self.set('accounts_remaining', data.meta.accounts_remaining);
+      },function(e,a){console.log(a)});
   }
 });

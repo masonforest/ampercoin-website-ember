@@ -1,3 +1,14 @@
+.purchase {
+  font-size: $font-size-h4;
+}
+
+.recent-purchases {
+  margin-top: 18px;
+}
+button.checkout{
+  width: 15%;
+  @extend .btn-lg;
+}
 .home {
   .top{
     text-align: center;
@@ -13,7 +24,7 @@
 
     ul {
       padding-left: 0;
-      width: 350px;
+      width: 460px;
       margin: 0 auto;
     }
 
@@ -25,7 +36,6 @@
       font-size: 1.5em;
     }
 
-    
 
     button {
       clear: both;
@@ -39,7 +49,6 @@
     background-color: #74B63E;
     border-bottom: 1px solid #ddd;
   }
-
 
   article {
     text-align: left;
@@ -89,7 +98,10 @@
       }
     }
   }
+
   .preorder {
+    margin-top: 250px;
+    margin-bottom: 400px;
     .price {
       text-align: right;
       font-size: 2.3em;
