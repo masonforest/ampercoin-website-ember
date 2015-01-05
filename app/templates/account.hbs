@@ -2,15 +2,15 @@
   <div class="account-info">
     <div class="address">Address: &{{model.address}}</div>
     <br>
-    <div class="balance">Balance: &amp;10.00</div>
+    <div class="balance">Balance: &amp;{{model.balance}}</div>
     {{#if model.locked}}
     <button {{action "comingSoon"}}>
         <i class="fa fa-key"></i>
         Unlock Wallet</button>
     {{else}}
-      <input placeholder="&bob"/>
-      <input placeholder="1.00"/>
-      <button {{action "comingSoon"}}>
+      {{input placeholder="&bob" value=receiver}}
+      {{input placeholder="1.00" value=amount}}
+      <button {{action "createTransaction"}}>
         <i class="fa fa-share"></i>
         Send Money
       </button>
@@ -24,5 +24,23 @@
         Lock Wallet
       </button>
     {{/if}}
+  </div>
+  <div>
+      <h3>Transaction History</h3>
+      <table class=".table-striped">
+      <tbody>
+      {{#each transactions}}
+        <tr>
+          <td>
+            <strong>{{format-address sender.address}}</strong>
+            sent
+            <strong>&{{format-ampercoin-amount amount}}</strong>
+            to <strong>{{format-address receiver.address}}</strong>
+            {{format-date createdAt}}
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+      </table>
   </div>
 </div>

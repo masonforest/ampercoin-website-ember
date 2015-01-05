@@ -19,8 +19,10 @@
     "pusher": "~2.2.3",
     "secure-random": "~1.1.1",
     "cryptocoin-eckey": "~0.8.0",
-    "crypto": "~3.46.1",
     "blockies": "~0.1.1",
-    "steganography": "~1.0.1"
+    "steganography": "~1.0.1",
+    "buffer": "~3.46.1",
+    "ecdsa": "~0.6.0",
+    "moment": "~2.8.4"
   }
 }

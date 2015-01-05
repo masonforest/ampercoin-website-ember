@@ -10,7 +10,8 @@ var app = new EmberApp({
   }
 });
 
-
+app.import('bower_components/moment/moment.js')
+app.import('bower_components/buffer/buffer.js')
 app.import('bower_components/steganography/src/steganography.js')
 app.import('bower_components/blockies/blockies.js')
 app.import('bower_components/qrcodejs/qrcode.js')
@@ -18,7 +19,9 @@ app.import('bower_components/bignumber.js/bignumber.js')
 app.import('bower_components/pusher/dist/pusher.js')
 app.import('bower_components/secure-random/lib/secure-random.js')
 app.import('vendor/ember-pusher/ember-pusher.js')
+app.import('vendor/sha256/sha256.js')
 app.import('vendor/eckey/ECKey.js')
+app.import('vendor/ecdsa/ECDSA.js')
 
 // Use `app.import` to add additional libraries to the generated
 // output files.

@@ -2,7 +2,7 @@ import DS from 'ember-data';
 var attr = DS.attr;
 
 export default DS.Model.extend({
-  account: DS.belongsTo('account'),
+  preordered_account: DS.belongsTo('preordered_account'),
   address: attr(),
   payment_address: attr(),
   paid: attr(),

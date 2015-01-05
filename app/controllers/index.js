@@ -27,7 +27,7 @@ export default Ember.Controller.extend(EmberPusher.Bindings, {
       var key = new ECKey(randomBytes, true);
 
       localStorage[key.publicKey.toString('hex')] = key.privateKey.toString('hex')
-      var account = store.createRecord('account', {
+      var account = store.createRecord('preordered_account', {
         address: this.get('address'),
         public_key: key.publicKey.toString('hex'),
       })
@@ -35,7 +35,7 @@ export default Ember.Controller.extend(EmberPusher.Bindings, {
 
       account.save().then(function(account) {
         var order = store.createRecord('order');
-        order.set('account', account)
+        order.set('preordered_account', account)
 
         var onSuccess = function(order) {
           self.transitionToRoute("order", order);
@@ -56,7 +56,7 @@ export default Ember.Controller.extend(EmberPusher.Bindings, {
     init: function(){
       this._super();
       self = this;
-      $.getJSON('http://localhost:3000/accounts').then(function(data){
+      $.getJSON('http://localhost:3000/preordered_accounts').then(function(data){
         self.set('accounts_remaining', data.meta.accounts_remaining);
       },function(e,a){console.log(a)});
   }

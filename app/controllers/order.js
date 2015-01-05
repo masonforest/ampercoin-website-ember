@@ -8,7 +8,7 @@ export default Ember.ObjectController.extend(EmberPusher.Bindings, {
   },
   actions: {
     paid: function (order){
-      this.transitionToRoute("account", this.model.get("account.address"));
+      this.transitionToRoute("account", this.model.get("preordered_account.address"));
     }
   }
 });
